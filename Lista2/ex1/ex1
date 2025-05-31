@@ -1,0 +1,14 @@
+#include <stdio.h>
+
+int main() {
+    float ang1, ang2, ang3;
+    scanf("%f%f%f", &ang1, &ang2, &ang3);
+
+    if (ang1 + ang2 + ang3 == 180 && (ang1 == 90 || ang2 == 90 || ang3 == 90)) {
+        printf("Eh um triangulo retangulo");
+    } else {
+        printf("Nao eh um triangulo retangulo");
+    }
+
+    return 0;
+}
