@@ -1,0 +1,12 @@
+# 1. Abra o terminal do VS Code na pasta do seu projeto.
+
+# 2. Adicionar o(s) novo(s) arquivo(s) ou alterações ao "stage"
+git add .
+
+# 3. Fazer um commit (registro) das alterações, com uma mensagem descritiva
+# Substitua a mensagem para descrever o exercício que você acabou de fazer.
+git commit -m "Adiciona exercicio de [Nome do Exercício]"
+
+# 4. Enviar suas alterações para o GitHub
+# Você pode ser solicitado a informar seu nome de usuário e Personal Access Token (PAT)
+git push origin main
