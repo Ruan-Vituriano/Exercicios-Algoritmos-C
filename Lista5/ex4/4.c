@@ -12,29 +12,43 @@ informar o total de todos os saques realizados e o total de cédulas usadas de c
 #include <stdio.h>
 
 int main(){
-    int saldo = 0;
     
-    int c100 = 0, c50 = 0, c20 = 0, c10 = 0;
-    while(saldo < 10000){
-        int saque;
+    
+    int total = 0;
+    int nota100 = 0, nota50 = 0, nota20 = 0, nota10 = 0;
+    do{
+        int c100 = 0, c50 = 0, c20 = 0, c10 = 0;
+        int saque, resto = 0;
         printf("Saque: ");
         scanf("%d", &saque);
 
-        saldo = saque;
+        if(saque + total > 10000){
+            printf("O valor ultrapassa o total no banco.\n");
+        } else {
+
+        
+        
+        total += saque;
+    
+            
         c100 = (saque / 100);
-        
-        int resto = saque % 100;
+        nota100 += c100;
+        resto = saque % 100;
+ 
         c50 = (resto / 50);
-
+        nota50 += c50;
         resto = resto % 50;
+       
         c20 = resto / 20;
-        
+        nota20 += c20;
         resto = resto % 20;
-        c10 = (resto / 10);
 
-        printf("Seu saldo e: %d\n", saldo);
+        c10 = (resto / 10);
+        nota10 += c10;
+        printf("Total Sacado: %d\n", total);
     }
-    printf("NOTAS\n100: %d\n50: %d\n20: %d\n10: %d", c100, c50, c20, c10);
+    }while(total < 10000);
+    printf("NOTAS\n100: %d\n50: %d\n20: %d\n10: %d", nota100, nota50, nota20, nota10);
 
     return 0;
 }
