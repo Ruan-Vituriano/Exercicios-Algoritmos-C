@@ -4,13 +4,17 @@
 #include <stdio.h>
 
 void hexa(int num){
-    if(num <= 0){
+        if(num == 0){
         return;
+}   
+    hexa(num / 16);
+    if(num % 16 >= 0 && num % 16 <= 9){
+        printf("%d", num);
+    } else {
+        printf("%c", (num % 16) + 55);
     }
-    return hexa(num % 16);
-    printf("%d", num);
-}
-
+    
+} 
 
 void main(){
     int num;
