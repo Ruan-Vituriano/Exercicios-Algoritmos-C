@@ -6,7 +6,7 @@ int div(int x, int y){
         return 0;
     }
     if(y > x){
-        return (x - y) * -1;
+        return x;
     } 
 
     return div(x - y, y);
